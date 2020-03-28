@@ -63,15 +63,10 @@ DGtot<-rename(DGtot,diagnosis="Clinical Diagnosis\r\n(CogDx)")
 
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
+## Figure 1
 
 ```{r Figure 3, echo=FALSE}
 library(ggplot2)
-
-#figure 1a
-
 theme_set(theme_bw())
 
 #Changing discrete variable to continuous 
