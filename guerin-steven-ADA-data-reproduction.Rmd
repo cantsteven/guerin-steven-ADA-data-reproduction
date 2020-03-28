@@ -13,6 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r cleaningdata}
 #Pick a small set of the descriptive and inferential stats they do, plus a visualization, and try to replicate those
 
+
 library(tidyverse)
 library(readxl)
 f<-"data/neurogenesisdata.xlsx"
