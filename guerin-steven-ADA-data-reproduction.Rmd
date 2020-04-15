@@ -17,8 +17,11 @@ Adult Neurogeneis, or the birth of new neurons in the adult brain, is a topic th
 
 ### Outline of Replicated Analysis 
 I re-did: 
+
 -Six of the graphs in figure 1 (these are showing how the individuals with various pathologies had different numbers of neurogenesis associated cell markers)
+
 -Part of Table 1 (this provides estimates for the total cell numbers of the cellular markers, and lower and upper confidence intervals)
+
 -Two graphs in figure 4 (these graph show how scores of cognition correlated with the number of labeled cells associated with neurogenesis). 
 
 
@@ -379,7 +382,7 @@ fig4c<-ggplot(data=DGmm,aes(x=DCXPCNA,y=Zscore))+
   geom_smooth(method=lm, se=FALSE, color="black")+
   geom_hline(yintercept = 0,linetype="dashed")+
   xlab(expression("DCX+PCNA+Cells per mm"^3)) + ylab("Global Cognitino Z-Scores")
- 
+  
 #Figure 4D
 Fig4d<-ggplot(data=DGmm,aes(x=NSK,y=Zscore))+
   ylim(-3,2)+
@@ -389,14 +392,13 @@ Fig4d<-ggplot(data=DGmm,aes(x=NSK,y=Zscore))+
   geom_hline(yintercept = 0,linetype="dashed")+
   xlab(expression("Nestin+Sox2+Ki67+Cells per mm"^3)) + ylab("Global Cognitino Z-Scores")
 
-
 ```
 
 
 # Figure 4C and D
 ```{r Fig4CandD, include=TRUE}
 
-(fig4c + Fig4d) 
+(fig4c + Fig4d)
 
 ```
 
