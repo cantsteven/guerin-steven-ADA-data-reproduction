@@ -382,10 +382,11 @@ summary {
 <h1>Introduction</h1>
 <div id="description-of-goals-of-paper" class="section level3">
 <h3>Description of Goals of Paper:</h3>
-<p>Adult Neurogeneis, or the birth of new neurons in the adult brain, is a topic that has been debated heavily for decades. This paper provides evidence that neurogenesis exists late in life, utilizing tissue from a cohort of people in their 80s and 90s to look for cellular markers of new cells. Tobin et al., showed that cells staining for markers implicated in neurogeneiss, like Nestin, Sox2 and DCX, localized in the dentage gyrus of the hippocampus. Additionally they were able to correlate the number of these cells with cognitive impairments and functional interactions between presynaptic SNARE proteins.</p>
+<p>Adult Neurogeneis, or the birth of new neurons in the adult brain, is a topic that has been debated heavily for decades. This paper provides evidence that neurogenesis exists late in life, utilizing tissue from a cohort of people in their 80s and 90s to look for cellular markers of new cells. Tobin et al., showed cells staining for markers implicated in neurogeneiss, like Nestin, Sox2 and DCX, localized in the dentage gyrus of the hippocampus. Additionally, they were able to correlate the number of these cells with cognitive impairments and functional interactions between presynaptic SNARE proteins.</p>
 </div>
 <div id="outline-of-replicated-analysis" class="section level3">
 <h3>Outline of Replicated Analysis</h3>
+<p>There wern’t any examples of inferential stats in the paper, so I did one descriptive analyses and two visualizaitons. In my lab these are the kind of things I will be using R for so I think this paper provided good relevant practice.</p>
 <p>I re-did:</p>
 <p>-Six of the graphs in figure 1 (these are showing how the individuals with various pathologies had different numbers of neurogenesis associated cell markers)</p>
 <p>-Part of Table 1 (this provides estimates for the total cell numbers of the cellular markers, and lower and upper confidence intervals)</p>
@@ -527,15 +528,18 @@ DCX GCL
 <h1>Discussion and Reflection</h1>
 <div id="how-good-was-the-replication" class="section level3">
 <h3>How Good Was the Replication?</h3>
-<p>I was able to make the graphs look pretty close to the originals (with some help of course). It took a lot of trial and error (and googling) to do certain things like move the legend where I wanted it, get the sizing on all the text correct and even simple seeming things like adding superscript to the x label. I had trouble getting the analysis in the table match up- I’m confused about what exactly they did in the paper to produce their numbers.</p>
+<p>I was able to make the graphs look pretty close to the originals (with some help of course). It took a lot of trial and error (and googling) to do certain things like move the legend where I wanted it, get the sizing on all the text correct and even simple seeming things like adding superscript to the x label. Overall I learned that ggplot is a pretty versatile tool- it’s possible to do a huge number of customizations to the graphs with it, it just takes time to learn what they are.</p>
 </div>
 <div id="challenges-encountered" class="section level3">
 <h3>Challenges Encountered…</h3>
 <p>The data file was laid out in a frustaratingly R-unfriendly way: this caused a significant amount of pain for myself. The data was presented with headers in two seperate rows, I ended up breaking the one large data frame into many smaller chunks to fix this. Columns were given names with lots of parentheses and spaces that made calling columns very difficult. Additionally, individual data points (like everything in the clinical diagnosis column) were labeled with numbers at the end that I had to remove. Overall the process was of trying to fix all this was not fun, and really shows the importance of writing your data in way that makes analyzing it easy in R.</p>
+<p>I noticed that when combining graphs in patchwork they become stretched- this made it tricky when I had to move the legends around. I figured out how to make it work eventually, but this created some problems for me.</p>
+<p>I don’t understand the need to convert variables from discrete to numeric or why read_excel doesn’t import numbers as numeric by itself. I’m sure the explanation is simple, but it took me a while before I realized I needed to do this.</p>
 </div>
 <div id="reasons-for-why-my-analysis-differed" class="section level3">
 <h3>Reasons For Why My Analysis Differed</h3>
 <p>Table 1 has results that are different than what the original researchers created. They provided instructions for how they got the values that I thought I understood very well, but for some reason my averages were always different than theirs (I even tried doing the math in excel, this didn’t change my result). Either I misunderstood how they manipulated their data, or they did some sort of additional processing that they didn’t write down in their methods. They also used an R package called metafor for the confidence intervals. I tried out the package and attempted to learn how it worked but quickly became overwhelmed- for table1 I decided to stick with packages I was familiar with.</p>
+<p>I couldn’t figure out what the researchers did to generate the p and beta values for figure D so I ommitted those from the graph. It would be nice if the paper had more detailed stats method section.</p>
 </div>
 </div>
 
